@@ -1,0 +1,302 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --roxo: #8d0ebf;
+    --fonte: 'PT Sans', sans-serif;
+
+}
+
+/* Formatação header*/
+.header-1{
+    width: 100%;
+    height: 25vh;
+    display: flex;
+    justify-content: center;
+    gap: 15vw;
+    padding: 2rem;
+    background-color: #000;
+}
+
+.icones1, .icones2{
+    display: flex;
+    gap: 3vw;
+}
+.icones1 .icones2, a{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1vw;
+    word-spacing: 0.1vw;
+    letter-spacing: 0.1vw;
+    text-decoration: none;
+    color: white;
+}
+
+.icones1 .icones2, img{
+    width: 1.5vw;
+    margin-right: 0.5vw;
+}
+
+.pesquisar input{
+    padding: 0.3vw;
+    width: 15vw;
+    border: none;
+    border-bottom: 2px solid white;
+    background-color: #000;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
+    outline: none;
+    font-size: 1vw;
+}
+
+.logo{ 
+    width: 20%;
+    height: 19vh;
+    margin-top: 1vh;
+}
+
+.logo img{
+    width: 53%;
+    margin-right: 8vw;
+    margin-top: -3vh;
+    object-fit: fill;
+}
+main{
+    height: 150vh;
+}
+
+.shopping-car{
+    display: flex;
+}
+
+.shopping-car h1{
+    color: white;
+    background-color: var(--roxo);
+    text-align: center;
+    font-size: 1.2vw;
+}
+
+#list-products {
+    margin-left: 25%;
+    margin-top: 3vh;
+}
+
+#list-item {
+    display: inline;
+}
+
+#list-element {
+    display: flex;
+    width: 100%;
+    font-family: var(--fonte);
+    text-align: center;
+    border: 1px solid rgba(128, 128, 128, 0.705);
+    margin-top: 2rem;
+}
+
+#list-item h1 {
+    height: 8vh;
+    font-family: var(--fonte);
+    font-size: 15px;
+}
+
+
+.descrição-produto{
+    width: 50%;
+    border: 1px solid rgba(128, 128, 128, 0.705);
+    text-align: center;
+}
+
+#item-produto {
+    width: 10vw;
+}
+
+#qtd-product {
+    width: 50%;
+    border: 1px 1px 0px 0px solid rgba(128, 128, 128, 0.705);
+    text-align: center;
+}
+
+#preco-unitario {
+    width: 50%;
+    border: 1px 1px 0px 0px solid rgba(128, 128, 128, 0.705);
+    text-align: center;
+}
+
+.quantidades{
+    width: 10%;
+    text-align: center;
+    border: 1px 1px 0px 0px solid rgba(128, 128, 128, 0.705);
+
+}
+
+.preco-unitario{
+    width: 10% ;
+    border: 1px 1px 0px 0px solid rgba(128, 128, 128, 0.705);
+}
+
+.desenvolvedor{
+    width: 100%;
+    font-size: 120%;
+    text-align: center;
+    color: var(--laranja);
+    background-color: #292a2d;
+    padding: 1%;
+}
+
+.item-produto {
+    background-color: gainsboro;
+}
+
+.total-pagamento {
+    margin-left: 5rem;
+    margin-top: 4rem;
+    border: 1px solid rgba(128, 128, 128, 0.705);
+    font-family: var(--fonte);
+}
+
+.total-pagamento{
+    margin-left: 5%;
+    width: 20%;
+}
+
+.resumo-pedido {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+
+.total {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.button-pagamento button {
+    margin-top: 2rem;
+    border: none;
+    padding: 1rem;
+    border-radius: 15px;
+    background-color: var(--roxo);
+    margin-bottom: 1vh;
+}
+
+.voltar button{
+    margin-top: 2rem;
+    border: none;
+    padding: 1rem;
+    border-radius: 15px;
+    background-color: gray;
+    margin-bottom: 1vh;
+    text-align: center;
+    margin-left: 4rem;
+}
+
+
+#remove-item {
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    border: none;
+    border-radius: 15px;
+    color: white;
+    margin: 1rem;
+}
+
+/* Responsividade Index */
+
+@media screen and (min-width: 300px) and (max-width: 800px) {
+    .header-1{
+        height: 20vh;
+    }
+
+    .logo img{
+        width: 18vw;
+        margin-right: 1rem;
+        margin-left: 1rem;
+    }
+
+    .icones1, .icones2, img{
+        width: 4vw;
+    }
+
+    .icones1{
+        margin-right: 4rem;
+        margin-top: -0.5rem;
+        margin-left: 2rem;
+    }
+
+    .icones2{
+        margin-right: 8rem;
+    }
+
+    .icones1{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .icones1 a{
+        display: flex;
+        font-size: 0.7rem;
+        gap: 0.4rem;
+    }
+
+    .pesquisar{
+        margin-top: 1rem;
+    }
+
+    .pesquisar ion-icon{
+        font-size: 2.4vw;
+        margin-top: 0.8%;
+    }
+
+    .pesquisar input{
+        width: 6rem;
+        font-size: 1.3vw;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    .icones2 a{
+        display: flex;
+        font-size: 0.7rem;
+    }
+
+    .icones2{
+        display: flex;
+        gap: 1.5rem;
+    }
+
+    .shopping-car{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+
+    #list-products{
+        margin-right: 20vw;
+        width: 80%;
+
+    }
+
+    .total-pagamento{
+       margin-top: 1.5rem;
+        width: 60%;
+
+    }
+
+    .total-pagamento h1{
+        font-size: 3vw;
+      
+
+    }
+
+    .desenvolvedor{
+        height: 10vh;
+        font-size: 1rem;
+
+    }
+    
+}
+
+

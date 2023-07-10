@@ -1,0 +1,920 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --roxo: #8d0ebf;
+    --fonte: 'PT Sans', sans-serif;
+
+}
+
+/* Formatação Modal*/
+
+.modal {
+    display: none; /* Oculta o modal por padrão */
+    position: fixed; /* Posiciona o modal em relação à janela do navegador */
+    z-index: 1; /* Define a ordem de empilhamento do modal */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Permite rolar a página quando o modal estiver aberto */
+    background-color: rgba(0, 0, 0, 0.4); /* Cria um fundo escuro semi-transparente */
+  }
+  
+  .modal-content {
+    background-color: #d799f0;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #8d0ebf;
+    width: 80%;
+    color:#fefefe
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .icones1 button{
+    height: 5vh;
+    background-color: black;
+    border: none;
+  }
+  
+
+/* Formatação header*/
+.header-1{
+    width: 100%;
+    height: 25vh;
+    display: flex;
+    justify-content: center;
+    gap: 9vw;
+    padding: 2rem;
+    background-color: #000;
+}
+
+.icones1, .icones2{
+    display: flex;
+    gap: 3vw; 
+}
+.icones1 .icones2, a{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1vw;
+    word-spacing: 0.1vw;
+    letter-spacing: 0.1vw;
+    text-decoration: none;
+    color: white;
+}
+
+.icones1 .icones2, img{
+    width: 1.5vw;
+    margin-right: 0.5vw;
+}
+
+#usuario {
+    font-size: 1rem;
+    font-family: var(--fonte);
+    color: #fff;
+    }
+
+
+#logout{
+    border-radius: 5px;
+    width: 5vw;
+    background-color: darkorchid;
+    color: #292a2d;
+    padding: 0.1rem;
+}
+
+.carrinho {
+    display: flex;
+}
+
+#numberItems {
+    font-size: 80%;
+    height: 15px;
+    width: 15px;
+    background-color: #8d0ebf;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.pesquisar input{
+    padding: 0.3vw;
+    width: 15vw;
+    border: none;
+    border-bottom: 2px solid white;
+    background-color: #000;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
+    outline: none;
+    font-size: 1vw;
+}
+
+#pesquisa::placeholder{
+    color: white;
+    word-spacing: 0.1vw;
+    letter-spacing: 0.1vw;
+}
+
+.pesquisar ion-icon{
+    color: white;
+    font-size: 1.5vw;
+    border: none;
+    border-bottom: 2px solid white ;
+    margin-top: 0.3%;
+    position: absolute;
+    margin-left: -1.4vw;
+
+}
+
+.logo{ 
+    width: 20%;
+    height: 19vh;
+    margin-top: 1vh;
+}
+
+.logo img{
+    width: 53%;
+    margin-right: 8vw;
+    margin-top: -3vh;
+    object-fit: fill;
+}
+
+.header-2{
+    background-color: #292a2d;
+}
+
+.header-2 ul{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: center;
+    height: 8vh;
+    width: 100%;
+    gap: 4rem;
+    padding: 1rem;
+   
+}
+ 
+.header-2 a{
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.header-2 a:hover{
+    color: var(--roxo);
+}
+
+.lista-1:hover { 
+    background-color: #d799f0; 
+    transition: 0.5s;
+    opacity: 0.7;
+    padding: 0.5vw;
+}
+
+
+.header-2 ion-icon{
+    color: var(--roxo);
+    margin-right: 0.5rem;
+    margin-top: 0.3rem;  
+}
+.main1{
+    background-color: #000;
+
+}
+
+.main2{
+    background-image: linear-gradient(131deg, rgba(69,69,69,1) 33%, rgba(141,14,191,1) 73%, rgba(222,58,209,1) 97%, rgba(222,58,209,1) 97%);
+    background-size: 400% 400%;
+    animation: degrade 10s ease infinite;
+}
+
+@keyframes degrade{
+    0%{
+        background-position: 0% 60% ;
+    }
+
+    50%{
+        background-position: 100% 50%
+    }
+
+    100%{
+        background-position: 0% 60%;
+    }
+}
+
+  /* Edição carrossel */
+
+section.carrossel-automatico{
+    width: 80%;
+    height: 70vh;
+    overflow: hidden;
+    margin: 2rem auto;
+    border: none;
+    position: relative;
+    margin-top: -0.1rem;
+}
+
+section.carrossel-automatico img{
+    width: 80vw;
+    height: 70vh;
+    object-fit: contain;
+}
+
+div.carrossel1 {
+    display: flex;
+    transform: translateX(0);
+    transition: 0.4s ease-in;
+}
+
+div.carrossel1 h1{
+    text-align: center;
+}
+
+  /* Edição barra beneficios */
+
+.club-beneficios{
+    background-color: #292a2d;
+    color: white;
+    font-size: 60%;
+    height: 10vh;
+    color:white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: -2rem;
+}
+
+.club-beneficios p{
+    font-size: 140%;
+}
+
+.vantagens{
+    display: flex;
+    gap: 1vw;
+}
+
+  /* Edição Promocoes */
+.promocoes{
+    width: 100%;
+    height: 120vh;
+}
+
+.animated-promo {
+    position: relative;
+    display: inline-block;
+    font-size: 5vw;
+    font-weight: bold;
+    color: white;
+    width: 100%;
+    text-align: center;
+    margin-top: 2vh;
+  
+  }
+  
+  .animated-text {
+    position: relative;
+    display: inline-block;
+    animation: animatePromo 1.5s ease-in-out infinite;
+  }
+  
+  @keyframes animatePromo {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+.promocoes-mes{
+ display: flex;
+justify-content: space-around;
+ padding: 2vw;
+}
+
+#card-promocao{
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    padding: 3%;
+    margin-top: 10%;
+    background-color: white;
+
+}
+
+#card-promocao h2{
+    margin-top: 15%;
+}
+
+.nitendo, .playstation3, .playstation4{
+    width: 30%;
+    font-family: var(--fonte);
+    font-size: 50%;  
+}
+
+.nitendo h1, .playstation3 h1, .playstation4 h1{
+   text-align: center; 
+   color: white;
+   border: none;
+   border-bottom: 2px solid yellowgreen;
+}
+
+
+.nitendo img, .playstation3 img, .playstation4 img{
+    width: 30%;
+    padding: 1%;
+}
+
+.nitendo button, .playstation3 button, .playstation4 button{
+    background-color: var(--roxo);
+    color: white;
+    font-family: sans-serif;
+    text-align: center;
+    border: none;
+    border-radius: 32px 64px;
+    margin-top: 10%;
+    cursor: pointer;
+    padding: 1%;
+
+}
+
+
+  /* Edição texto-cliente*/
+
+
+.texto-cliente{
+    width: 100%;
+    height: 80vh;
+}
+
+#textoCliente{
+    width: 80%;
+    height: 90%;
+    margin-left: 10vw;
+    border-radius: 10px;
+    margin-top: -2%;
+}
+
+.texto-cliente h1{
+    font-size: 2.5em;
+    text-align: start;
+    margin-top: 2rem;
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    word-spacing: 1vw;
+    letter-spacing: 0.1vw;
+    font-style: italic;
+    padding: 1vw;
+    border: none;
+    width: 95%;
+    border-bottom: 4px solid yellowgreen;   
+}
+
+.texto-cliente h3{
+    text-align: justify;
+    padding: 2rem;
+    font-size: 2 rem;
+    line-height: 2rem;
+    font-weight: 100;
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    word-spacing: 1vw;
+}
+
+  /* Edição Footer */
+
+footer{
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    background-color: #000;
+    padding: 2vw;
+}
+
+footer h1{
+    margin-bottom: 2rem;
+    font-family: sans-serif;
+}
+
+footer a{
+    color: white;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 1vw;
+    line-height: 4vh;
+}
+
+.atendimento{
+    text-align: justify;
+}
+
+.atendimento img{
+    width: 2.5vw;
+}
+
+.atendimento p{
+    font-size: 1vw;
+    line-height: 3.5vh;
+}
+
+.atendimento ion-icon{
+    font-size: 1.1vw;
+    padding-right: 0.4vw;
+}
+
+.formas-pagamento1{
+    border-top: 1px solid white;
+}
+
+.formas-pagamento2{
+    text-align: center;
+}
+
+.newsLetter input{
+    padding: 1vw;
+    width: 18vw;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+}
+
+.input img{
+    position: absolute;
+    width: 2%;
+    margin-left: -2.5%;
+    margin-top: 1.5%;
+   
+   
+}
+
+.icones-footer ion-icon{
+    font-size: 120%;
+    margin-right: 3%;
+  
+}
+
+.desenvolvedor{
+    width: 100%;
+    font-size: 120%;
+    text-align: center;
+    color: var(--roxo);
+    background-color: #292a2d;
+    padding: 1%;
+}
+
+
+
+/* Formatação sobre.html */
+
+.sobre{
+    width: 100%;
+    height: 90vh;
+    padding: 2rem;
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(4,0,0,0.4290091036414566) 50%, rgba(0,0,0,0) 100%);
+}
+
+.sobre h1{
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.sobre h3{
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.eu {
+    border-radius: 5rem;
+    width: 10vw;
+    margin-right: 1rem;
+}
+
+.sobre a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.sobre a:hover{
+    color: var(--roxo);
+}
+
+
+
+/* Formatação cards produtos .html */
+
+.ps4,.ps5,.ps3,.xbox{
+    height: 100vh;
+}
+
+
+/*Formatação dos cards*/
+
+.cards{
+    padding: 2vw;
+    display: flex;
+    gap: 3;
+}
+
+.game-card {
+    width: 20vw;
+    border: 1px solid #b6b3b3;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #292a2d;
+  }
+
+  .game-card h1{
+    color: #8d0ebf;
+    text-align: center;
+    margin-bottom: 0.5vh;
+  }
+
+  .game-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 2vh;
+  }
+
+  .game-card .game-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom:2vw;
+  }
+
+  .game-card .game-info .price {
+    font-size: 2vw;
+    font-weight: bold;
+  }
+
+  .game-card .game-info .description-icon {
+    width: 2vw;
+    height: 2vw;
+    cursor: pointer;
+  }
+
+  span{
+    color: rgb(119, 231, 7);
+    font-size: 3vw;
+  }
+
+  #quantidade{
+    margin-top: 3vh;
+    color:#b6b3b3;
+  }
+
+
+  /* Estilos para a descrição */
+  .game-card .game-description {
+    display: none;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 14px;
+    line-height: 1.5;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    z-index: 999;
+    width: 250px;
+  }
+
+  #comprar{
+    width: 10vw;
+    padding: 1vw;
+    border-radius: 10px;
+    border: none;
+    color: lawngreen;
+    background-color: #8d0ebf;
+    font-family:var(--fonte);
+    font-size: medium;
+    margin-left: 3rem;
+
+  }
+
+  .game-card .game-description::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #f9f9f9 transparent;
+  }
+
+  .game-card .game-description.active {
+    display: block;
+  }
+
+   /* Responsividade Index */
+
+   @media screen and (min-width: 300px) and (max-width: 700px) {
+    .header-1{
+        height: 20vh;
+    }
+
+    .logo img{
+        width: 18vw;
+        margin-right: 1rem;
+        margin-left: 1rem;
+    }
+
+    .icones1, .icones2, img{
+        width: 4vw;
+    }
+
+    .icones1{
+        margin-right: 4rem;
+        margin-top: -0.5rem;
+        margin-left: 2rem;
+    }
+
+    .icones2{
+        margin-right: 8rem;
+    }
+
+    .icones1{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .icones1 a{
+        display: flex;
+        font-size: 0.7rem;
+        gap: 0.4rem;
+    }
+
+    .pesquisar{
+        margin-top: 1rem;
+    }
+
+    .pesquisar ion-icon{
+        font-size: 2.4vw;
+        margin-top: 0.9%;
+    }
+
+    .pesquisar input{
+        width: 6rem;
+        font-size: 1.3vw;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    .icones2 a{
+        display: flex;
+        font-size: 0.7rem;
+    }
+
+    .icones2{
+        display: flex;
+        gap: 1.5rem;
+    }
+
+    .header-2{
+        height: 25vh;
+        
+    }
+
+    .header-2 ul{
+        display: inline-block;
+    }
+
+    .header-2 a{
+        font-size: 2vh;
+    }
+
+
+    .header-2 a:hover{
+        color: var(--roxo);
+    }
+    
+    .lista-1:hover { 
+        background-color: #d799f0; 
+        transition: 0.5s;
+        opacity: 0.7;
+    }
+    
+    .club-beneficios{
+        height: 24vh;
+        display: flex;
+    }
+ 
+    .vantagens img{
+        width: 4vw;
+        margin-left: 1rem;
+    }
+
+    .vantagens{
+    
+        width: 14vw;
+        height: 20vh;
+        display: flex;
+        flex-direction: column;
+        font-size: 1vw;
+        margin-left: 1.2rem;
+        margin-right: 1rem;
+        
+    }
+
+    .vantagens p{
+        font-size: 1.8vw;
+    }
+
+    .main1{
+        height: 50vh;
+    }
+
+    .carrossel1{
+        margin-top: -5rem;
+    }
+
+    .main2{
+        height: 430vh;
+
+    }
+
+    .promocoes{
+        height: 270vh;
+    }
+
+    .animated-promo {
+        font-size: 5vw;
+    }
+
+    .nitendo h1, .playstation3 h1, .playstation4 h1{
+        height: 6vh; 
+        width: 150%;
+        margin-top: 5vh;
+    }
+ 
+    .promocoes-mes{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #card-promocao{
+        width: 80vw;
+        height: 35vh;
+        margin-left: 0.5rem;
+    }
+
+    #textoCliente{
+      
+        width: 85%;
+        font-size: 2.5vw;
+       
+    }
+
+    footer{
+        height: 115vh;
+        display: flex;
+        flex-direction: column;
+     
+    }
+
+    .instituional h1, .minhaConta h1, .atendimento h1, .newsLetter h1{
+        font-size: 3vh;
+        margin-bottom: -0.1rem;
+
+
+    }
+
+    .instituional a, .minhaConta a, .atendimento a, .newsLetter a{
+        font-size: 2vh;
+
+    }
+
+    .instituional{
+        height: 25vh;
+    }
+
+    .minhaConta{
+        height: 25vh;
+        margin-top: 1rem;
+    
+    }
+
+    .atendimento{
+        height: 35vh;
+        margin-top: 1rem;
+    
+    }
+
+    .atendimento p{
+        font-size: 2vh;
+    }
+
+    .atendimento ion-icon{
+        font-size: 2.5vw;
+    }
+
+    .atendimento img{
+        width: 6vw;
+    }
+
+    .formas-pagamento2{
+        margin-top: -2.1rem;
+        margin-left: 2rem;
+    }
+
+    .newsLetter{
+        height: 25vh;
+        margin-top: 1rem;
+    
+    }
+
+    .newsLetter input{
+        width: 40vw;
+    }
+
+    .newsLetter img{
+        width: 4vw;
+        margin-left: -1.5rem;
+        
+    }
+
+    .icones-footer ion-icon{
+        width: 5vw;
+    }
+
+    .desenvolvedor{
+        height: 10vh;
+        font-size: 1rem;
+
+    }
+
+    .cards{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .game-card{
+        width: 70%;
+    }
+
+
+    .ps4,.ps5,.ps3,.xbox{
+        height: 400vh;
+    }
+
+
+    #comprar{
+        width: 20vw;
+    }
+
+    .game-card img {
+        width: 60%;
+        margin-left: 4rem;
+        margin-top: 1rem;
+      }
+    
+      .game-card .game-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom:2vw;
+      }
+    
+      .game-card .game-info .price {
+        font-size: 5vw;
+        padding: 1rem;
+      }
+    
+      .game-card .game-info .description-icon {
+        width: 8vw;
+        height: 5vw;
+        margin-right: 5rem;
+      }
+    
+      .sobre a{
+        font-size: 4vw;
+      }
+
+      .sobre{
+        background-color: #292a2dcb;
+      }
+    
+}

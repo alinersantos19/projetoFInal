@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrainGames</title>
+    <link rel="stylesheet" href="styleCarrinho.css">
+    <link rel="icon" href="img/cerebro.png">
+    <script src="script.js" defer></script>
+    <script src="localStorage.js" ></script>
+</head>
+<body>
+
+    <header>
+        <nav class="header header-1">
+            <div class="icones1">
+                <div>
+                    <a href=""><img src="img/sac.png" alt="">SAC</a>
+                </div>
+            </div>
+            
+    
+            <div class="logo">
+                <img src="img/logo.jpg" alt="">
+            </div>
+
+            <div class="icones2">
+                <div>
+                    <a href=""><img src="img/conta.png" alt="">Minha Conta</a>
+                </div>
+                <div>
+                    <a href=""><img src="img/carrinho.png" alt=""></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+        <main>
+            <section class="shopping-car">
+                <div id="list-products">
+                    <ul id="list-item">
+                        <script>
+                            getListCarrinho();
+                        </script>
+                    </ul>
+                </div>
+
+                <div class="total-pagamento">
+                    <div class="title">
+                        <h1>Resumo do Pedido</h1>
+                    </div>
+                    <div class="resumo-pedido">
+                        <p>Subtotal</p>
+                        <input id="subtotal-payment" type="text">
+                    </div>
+        
+                    <div class="total">
+                        <p>Total</p>
+                        <input id="total-payment" type="text">
+                        <p id="total-frete" >total + frete</p>
+                        <div class="button-pagamento">
+                            <button onclick="alertPayment();" >Ir Para Pagamento</button>
+                        </div>
+                    </div>
+                    <div class="voltar">
+                        <a href="index.html"><button >Voltar ao Home</button></a>
+                    </div>
+                    <script>
+                        getSubtotal();
+                        getTotal();
+                    </script>
+                </div>
+            </section>
+            
+        </main>
+    
+        
+    <!--     <footer>
+            <a href="" id="logout">Logout</a>
+            <div class="desenvolvedor">
+                <p> Brain Games Comercio de Jogos - CNPJ: 00.000.000/0000-00 &copy;Todos os direitos reservados. 2023
+                </p>
+            </div>
+        </footer> -->
+    
+    </body>
+    
+    </html>
+
+</body>
+</html>

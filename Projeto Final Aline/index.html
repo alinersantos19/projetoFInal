@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrainGames</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/cerebro.png">
+    <script src="script.js" defer></script>
+    <script src="script-index-logar.js" defer></script>
+    <script src="modal.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <nav class="header header-1">
+            <div class="icones1">
+                <button id="openModalBtn"><img src="img/sac.png" alt=""></button>
+                <div id="modal" class="modal">
+                  <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Entre em contato conosco</h2>
+                    <p> <img src="img/whatsapp3d.png" alt="">(61)9999-9999</i></p>
+                  </div>
+                </div>
+                <div class="pesquisar">
+                    <ion-icon name="search"></ion-icon>
+                    <input type="text" name="" id="pesquisa" placeholder=" O que você procura?">
+                </div>
+            </div>
+            
+    
+            <div class="logo">
+                <img src="img/logo.jpg" alt="">
+            </div>
+
+            <div class="icones2">
+                <div>
+                    <a href="login.html"><img src="img/conta.png" alt="">Minha Conta</a>
+                    <h1><span id="usuario">Bem-vindo</span></h1>
+                    <button id="logout"> Logout </button>
+                </div>
+                <div>
+                    <a href="carrinho.html"><img src="img/carrinho.png" alt=""></a>
+                </div>
+            </div>
+        </nav>
+
+        <nav class=" header header-2"> 
+            <ul class="lista-1">
+                <li> <a href="index.html" id="teste"><ion-icon name="game-controller"></ion-icon>Início</a> </li>
+                <li> <a href="ps3.html"><ion-icon name="game-controller"></ion-icon>Playstation 3 </a> </li>
+                <li> <a href="ps4.html"><ion-icon name="game-controller"></ion-icon>Playstation 4 </a> </li>
+                <li> <a href="ps5.html"><ion-icon name="game-controller"></ion-icon>Playstation 5 </a> </li>
+                <li> <a href="xbox.html"><ion-icon name="game-controller"></ion-icon>XBOX </a> </li>
+                <li> <a href="sobre.html"><ion-icon name="game-controller"></ion-icon>Sobre </a> </li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main class="main1">
+        <section class="carrossel-automatico">
+            <div class="carrossel1" id="img">
+                <div>
+                    <img src="img/banner-1.png" alt="">
+                </div>
+                <div>
+                    <img src="img/banner-2.jpg" alt="">
+                </div>
+                <div>
+                    <img src="img/banner-3.jpg" alt="">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <main class="main2">
+        <div class="club-beneficios">
+            <div class="vantagens">
+                <img src="img/cartao.png" alt="">
+                <div>
+                    <h1>PARCELAMENTO</h1>
+                    <p>em até 3x sem juros</p>
+                </div>
+            </div>
+
+            <div class="vantagens">
+                <img src="img/caminhao.png" alt="">
+                <div>
+                    <h1>ENVIO RÁPIDO</h1>
+                    <p>Postamos no mesmo dia</p>
+                </div>
+            </div>
+
+            <div class="vantagens">
+                <img src="img/fone.png" alt="">
+                <div>
+                    <h1>ATENDIMENTO</h1>
+                    <p>Suporte especializado</p>
+                </div>
+            </div>
+
+            <div class="vantagens">
+                <img src="img/presente .png" alt="">
+                <div>
+                    <h1>COMPRE E GANHE</h1>
+                    <p>Brindes em todos os pedidos</p>
+                </div>
+            </div>
+
+            <div class="vantagens">
+                <img src="img/seguro.png" alt="">
+                <div>
+                    <h1>SITE SEGURO</h1>
+                    <p>Compre com segurança</p>
+                </div> 
+            </div>
+
+        </div>
+
+        <div class="promocoes">
+
+            <h1 class="animated-promo">
+                <span class="animated-text">PROMOÇÕES</span>
+            </h1>
+
+            <div class="promocoes-mes">
+
+                <div class="nitendo">
+                    <h1>Nitendo</h1>
+                    <div id="card-promocao" >
+                        <img src="img/Blaze and the Monster.jpg" alt="">
+                        <div>
+                            <h2>Blaze and the Monster Machines Axles City Rancers</h2>
+                            <h2>R$ 379,99</h2>
+                            <button>Ver detalhes</button>
+                        </div>
+                    </div>
+
+                    <div id="card-promocao">
+                        <img src="img/Transformers Battlegrounds - Switch.jpg" alt="">
+                        <div>
+                            <h2>Transformers Battlegrounds - Switch</h2>
+                            <h2>R$ 209,99</h2>
+                            <button>Ver detalhes</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="playstation3">
+                    <h1>Playstation 3</h1>
+                    <div id="card-promocao" >
+                        <img src="img/Beyond Two Souls.jpg" alt="">
+                        <div>
+                            <h2>Beyond Two Souls - PS3</h2>
+                            <h2>R$ 59,99</h2>
+                            <button>Ver detalhes</button>
+                        </div>
+                    </div>
+
+                    <div id="card-promocao">
+                        <img src="img/Residente Evil 5 - PS3.jpg" alt="">
+                        <div>
+                            <h2>Residente Evil 5 - PS3</h2>
+                            <h2>R$ 99,99</h2>
+                            <button>Ver detalhes</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="playstation4">
+                    <h1>Playstation 4</h1>
+                    <div id="card-promocao" >
+                        <img src="img/Homefront - The Revolution - PS4.jpg" alt="">
+                        <div>
+                            <h2>Homefront - The Revolution - PS4</h2>
+                            <h2>R$ 109,99</h2>
+                            <button>Ver detalhes</button>
+                        </div>
+                    </div>
+
+                    <div id="card-promocao">
+                        <img src="img/Cris Sales - PS4.jpg" alt="">
+                        <div>
+                            <h2>Cris Sales - PS4</h2>
+                            <h2>R$ 109,99</h2>
+                            <button>Ver detalhes</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="texto-cliente">
+        
+            <div id="textoCliente">
+                <h1>O que pensam os Clientes Brain Games</h1>
+                <h3>A Brains Games é a melhor loja de games online, com preço justo e diversas ofertas imperdíveis!
+                    Nos dedicamos a oferecer os melhores jogos e produtos gamers do mercado com garantia de qualidade e entrega rápida para todo o Brasil.
+                    Por conta disso, sempre recebemos ótimos feedbacks nos parabenizando pela excelente experiência no site e alto nível de profissionalismo.
+                    Compre o melhoor do mundo Gamer. Pague suas compras com PIX, boleto, depósito ou via Bitcoin e receba 10% de desconto!
+                    E se não quiser pagar à vista, você ainda pode parcelar em até 9 vezes sem juros no cartão de crédito ou paypal.
+                    Após ter o pagamento do pedido confirmado, você receberá o código de rastreio do produto em até 10 minutos.
+                    <br><br>ATENÇÃO: oferecemos frete grátis para os clientes que moram nas região Centro-oeste.<br></h3>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <div class="instituional">
+        <h1>Institucional</h1>
+        <p><a href="">Fale Conosco</a></p>
+        <p><a href="">Termos e Condições</a></p>
+        <p><a href="">Envio, devolução, reembolso e troca</a></p>
+        <p><a href="">Política de Privacidade</a></p>
+        <p><a href="">Pagamento e Processo de compra</a></p>
+    </div>
+
+    <div class="minhaConta">
+        <h1>Minha Conta</h1>
+        <p><a href="">Minha Conta</a></p>
+        <p><a href="">Meus Pedidos</a></p>
+        <p><a href="">Minha Sacola</a></p>
+        <p><a href="">Promoção</a></p>
+    </div>
+
+    <div class="atendimento">
+        <h1>Atendimento</h1>
+        <p><ion-icon name="mail"></ion-icon>E-mail:</p>
+        <p><a href="">liongames.adm@gmail.com</a></p>
+        <p></p><br>
+        <p><ion-icon name="time"></ion-icon>Horário de atendimento:</p>
+        <p>SEG À SEX - 9:00 ÀS 21:00</p>
+        <P>SAB - 9:00 ÀS 21:00</P>
+        <P>DOM - 9:00 ÀS 21:00</P>
+
+        <div class="formas-pagamento1">
+            <img src="img/american.png" alt="">
+            <img src="img/diners.png" alt="">
+            <img src="img/elo-150x150.png" alt="">
+            <img src="img/hiper.png" alt="">
+            <img src="img/master.png" alt="">
+            <img src="img/visa.png" alt="">
+        </div>
+        <div class="formas-pagamento2">
+            <img src="img/boleto.png" alt="">
+            <img src="img/pix.png" alt="">
+        </div>
+        <div>
+            <img src="" alt="">
+        </div>
+    </div>
+
+    <div class="newsLetter">
+        <h1>Promoções</h1>
+        <p><a href="">Receba nossas Newsletters</a></p>
+        <div class="input">
+            <input type="text" name="" id="">
+            <img src="img/enviar.png" alt="">
+        </div>
+
+        <div class="icones-footer">
+            <a href=""><ion-icon name="logo-instagram"></ion-icon></a>
+            <a href=""></a><ion-icon name="logo-facebook"></ion-icon>
+            <a href=""></a><ion-icon name="logo-twitter"></ion-icon>
+            <a href=""></a><ion-icon name="logo-whatsapp"></ion-icon>
+        </div>
+        
+    </div>
+</footer>
+
+<div class="desenvolvedor">
+    <p> Brain Games Comercio de Jogos - CNPJ: 00.000.000/0000-00 &copy;Todos os direitos reservados. 2023
+    </p>
+</div>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>   
+</body>
+</html>
